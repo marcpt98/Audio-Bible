@@ -88,7 +88,7 @@ layout: default
     (first image) can’t have the same sound as a fight against a random skeleton (second image).
     <img src="https://media.discordapp.net/attachments/555497331848380447/681256149621801244/d-tmpWcVzdR5y5lFjIgiGB6bSTjSMqWDUwY-wUCc2ehFD85ROD2Jzk10_LWK0fgNclJ40nENQKh0JEqJ7MIvYOT7Jqyaix04UTxt.png?width=777&height=438">
     <img src="https://media.discordapp.net/attachments/555497331848380447/681256129933869126/bhh8WrqLDdFbks01-oudtRVfLLI3nf_jQ7wm6-WNsRai2cTxi5ekxU8_KrIUlod2rLXq5r9VYaLIjJkke-67af_muI-hd8ZgqArn.png?width=293&height=437">
-    
+    <br/>
     - Sound Effects: There are a lot of sounds not related to the ambience, interaction or enemies that are very important and 
     make a game from a mediocre audio to an excellent one with a good atmosphere. This sounds are events that the player can’t 
     control like a rock falling down a cliff, a steam blast from a sewer system when the character is passing by or terrifying 
@@ -138,6 +138,49 @@ layout: default
     <img src="https://media.discordapp.net/attachments/555497331848380447/681256266399481916/p3lq5AbCImuSBt758ifn0IEeBsxf61zlnUtEsT7k-ZmefTorZfiRxnCCZ_DQRCPWh-xcA3h3Uzgyldk70ruV8sfQ9JVO05XGArj0.png?width=699&height=437">
     <img src="https://media.discordapp.net/attachments/555497331848380447/681263013873057829/unknown.png">
     
+    <h2>
+      Audio implementation example
+    </h2>
+    There are a lot of ways to implement an audio to the game but it is normally made by layers. This is a real example 
+    of the audio implementation for the game Zeus: Master of Olympus summed up in some lines (This audio engine harnesses 
+    up to six distinct layers of sound):
+    - Layer 0: This is the ambient sound layer. As the player passes over certain types of the map, that terrain ambient 
+    sound loop begins to play. If the area changes, the first track fades out while a new track fades in. There can be only 
+    two ambient sounds crossfading into one another at a time.
+    - Layer 1: Make a 3D sound engine where the sounds can travel through a four-speaker system, complete with a parameter 
+    list defining each sound’s path and travelling speed.
+    - Layer 2: Ambient sounds generated from terrain and buildings, which will produce sound occasionally and are randomly 
+    selected. This is made to complement the ambient track of the Layer 0.
+    - Layer 3: All the songs related to the civilians, animals, monsters and combat. It’s also included the disaster and 
+    UI sounds.
+    - Layer 4: Interactive system where the music is played based on the game event. “General” music is played when there’s 
+    no event, “Action” music is played when there’s a combat and “Special” music is played when there’s an important event.
+    - Layer 5: All the narration and the in-game dialogues of all characters.
+    <img src="https://media.discordapp.net/attachments/555497331848380447/681256304571842605/VMCTtBo9N4VDIjIEiRJIe3m9FrHW69uowT5Xryyzfyu10Tsq0tQOm7ouz25Lq8tGPf9YnxcK3LrAqZbhYOGlgxDAwIIDEoXdpgxU.png">
+    
+    <h2>
+      Content list
+    </h2>
+    Apart from all the songs of the game, there are also other ones so it’s needed to sort it all of them. 
+    One way to sort all the audio is like this:
+    - Sound design: Action sounds, explosions, weapons, characters (not dialogue) and UI.
+    - Music: Menu music, in-game music, options music, win/lose music... 
+    - Dialogue: in-game characters and narration.
+    - Additional audio: Demos, marketing, web site, promos, in-game animations...
+    <img src="https://media.discordapp.net/attachments/555497331848380447/681256325229183027/TWuf2TzKDR0kzxsoRsQgZ2fm6cUACduPhbQmizSyzvJQH4C3AQ4eQOyz9XZ5BSlrZOcHgMhgDHou90uOrqvUshi7_UDWmpFUw5V4.png?width=777&height=438">
+    <img src="https://media.discordapp.net/attachments/555497331848380447/681256336226648065/zKKCmTb-pPkHq-tLvYvfeNpekFkhZKyCuY56qxIuMBBastRKm3CfJHAvq9C462aSmawdmiaq-6WQbiMtE04z1nx1cdKJpfE3wwrv.png?width=607&height=438">
+    
+    <h2>
+      Schedule
+    </h2>
+    There should be a part that specify about the milestones of the audio. There must be information about when the 
+    differents parts of the audio will be finished and who and how many persons are working in every feature and how 
+    much time they have to spend on it. This can be updated about every month in order to keep a dynamic workflow.
+    <img src="https://media.discordapp.net/attachments/555497331848380447/681256353180024928/q-VLcplymf9asKMyguaDJQfqP5L2zDvZ-9lPZKo5nfLXGxv4n4zsm-bVn-1iiNec00tRbuQeDltXvlw8Drv4Oea7y9CDpnB5f5ne.png">
+    
+    <h2>
+      Design production checklist
+    </h2>
     
     
     
